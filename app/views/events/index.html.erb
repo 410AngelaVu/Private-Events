@@ -1,6 +1,6 @@
 <div class="container">
 	<!-- if user has any meetings to show -->
-	<% unless current_user.events.any? %>
+	<% unless current_user.created_events.any? %>
 <%= render 'events_cta' %>
 	<% else %>
 	<!-- here i am passing variable from index method from the controller  -->
