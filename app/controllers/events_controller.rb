@@ -21,6 +21,7 @@ end
 
 def show
 @event = Event.find(params[:id])
+session[:current_event] = @event.id
 	end
 
 	private
