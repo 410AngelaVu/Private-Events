@@ -2,6 +2,8 @@ class EventsController < ApplicationController
 before_action :authenticate_user!
 def index
 @events = Event.all.order('created_at DESC')
+@upcoming_events = Event.where("start_time > ?", Time.now)
+@past_events = Event.where("start_time < ?", Time.now)
 end
 
 def new
@@ -27,7 +29,7 @@ session[:current_event] = @event.id
 	private
 
 	def event_params
-params.require(:event).permit(:start_time, :end_time, :title, :description)
+params.require(:event).permit(:start_time, :creator_id, :end_time, :title, :description)
 	end
 
 end

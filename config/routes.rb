@@ -4,5 +4,5 @@ Rails.application.routes.draw do
  resources :homes
  resources :events
  resources :users
- resources :attendances, only: [:new, :create]
+ resources :attendances
 end

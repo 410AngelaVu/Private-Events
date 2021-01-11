@@ -1,8 +1,12 @@
 <div class="container">
 	<h1>
-		Hello <%= current_user.name %> this is your list of events 
+		Hello <%= current_user.name %> this is your list of past events 
 	</h1>
-	<% @events.each do |e| %>
+	<% @past_events.each do |e| %>
+	<%= link_to e.title, e %><br>
+	<% end %>
+	<h2>This is the list of upcoming events:</h2>
+	<% @upcoming_events.each do |e| %>
 	<%= link_to e.title, e %><br>
 	<% end %>
 	<%= link_to 'Schedule New Session', new_event_path, class:'btn btn-success' %>

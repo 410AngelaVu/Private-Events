@@ -1,0 +1,4 @@
+<h3>Hello <%= current_user.name %> this is the list of events you are attending</h3>
+<% current_user.attended_events.where('start_time < ?', Time.now).each do |r| %>
+<%= link_to r.title, r %><br>
+	<% end %>
