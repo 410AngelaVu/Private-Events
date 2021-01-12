@@ -1,24 +1,51 @@
 # README
+> In this project I have created Private Events Application with Bootstrap. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![screenshot](./app_screenshot.png)
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- Ruby on Rails
+- Bootstrap
 
-* System dependencies
+## Getting Started
 
-* Configuration
+**First get at copy of the project by clicking on the green button on the top right corner**
+**On your local machine run this command `git clone git@github.com:410AngelaVu/Private-Events.git`**
+**Then type `cd TwitterClone` and that will get you inside the project.**
+**Then run bundle install**
+**Run db:migrate**
+**To open in server, go to the browser and type localhost:3000**
 
-* Database creation
+## To install Bootstrap in Rails:
+- Go to your Terminal and put this:
 
-* Database initialization
+- yarn add bootstrap jquery popper.js
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Need to have Ruby install
+- Rails
 
-* Deployment instructions
 
-* ...
+### Usage
+
+- Sign Up to a new account and test the functionalities!
+
+## Authors
+
+👤 **Gia Vu**
+
+- GitHub: [https://github.com/410AngelaVu]
+- Twitter: [https://twitter.com/andjelavukadin7]
+- LinkedIn: [https://www.linkedin.com/in/andjela-vukadinovic-67a21b1b2/]
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/).
+- [The Odin Project](https://www.theodinproject.com/).
+
+## 📝 License
+
+This project is [MIT licensed](https://github.com/chubaquelo/re-former/blob/form/LICENSE).
