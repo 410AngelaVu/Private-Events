@@ -1,10 +1,7 @@
 class AttendancesController < ApplicationController
 before_action :authenticate_user!
 
-def index
-@past_attendance = Attendance.where("start_time < ?", Time.now)
-@upcoming_attendance = Attendance.where("start_time > ?", Time.now)
-end
+
 
 def new
 @attendance = Attendance.new

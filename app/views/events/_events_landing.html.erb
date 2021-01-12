@@ -1,6 +1,6 @@
 <div class="container">
 	<h1>
-		Hello <%= current_user.name %> this is your list of past events 
+		Hello <%= current_user.name %> this is  list of all past events 
 	</h1>
 	<% @past_events.each do |e| %>
 	<%= link_to e.title, e %><br>
