@@ -2,8 +2,8 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
   def index
     @events = Event.all.order('created_at DESC')
-    @upcoming_events = Event.where('start_time > ?', Time.now)
-    @past_events = Event.where('start_time < ?', Time.now)
+    @future_events = Event.where('start_time > ?', Time.now)
+    @previous_events = Event.where('start_time < ?', Time.now)
   end
 
   def new

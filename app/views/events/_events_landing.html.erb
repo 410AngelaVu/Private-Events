@@ -2,11 +2,11 @@
 	<h1>
 		Hello <%= current_user.name %> this is  list of all past events 
 	</h1>
-	<% @past_events.each do |e| %>
+	<% @previous_events.each do |e| %>
 	<%= link_to e.title, e %><br>
 	<% end %>
 	<h2>This is the list of upcoming events:</h2>
-	<% @upcoming_events.each do |e| %>
+	<% @future_events.each do |e| %>
 	<%= link_to e.title, e %><br>
 	<% end %>
 	<%= link_to 'Schedule New Session', new_event_path, class:'btn btn-success' %>
