@@ -6,6 +6,6 @@ class Event < ApplicationRecord
   validates :title, presence: true, length: { minimum: 2 }
   validates :description, presence: true, length: { in: 5..100 }
 
-  scope :upcoming, -> { where('event_date >= ?', Time.now) }
-  scope :previous, -> { where('event_Date < ?', Time.now) }
+  scope :upcoming, -> { where('start_time >= ?', Time.now) }
+  scope :previous, -> { where('start_time < ?', Time.now) }
 end

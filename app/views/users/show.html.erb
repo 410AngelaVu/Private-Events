@@ -1,6 +1,19 @@
 <div class="container">
+<h3>Welcome <%= current_user.name %>, this is the list of past events you attended:</h3>
+<%  @past_events.each do |r| %>
+<%= link_to r.title, r %><br>
+	<% end %>
+
+<h3><%= current_user.name %> this is the list of future events you are attending:</h3>
+<% @upcoming_events.each do |r| %>
+<%= link_to r.title, r %><br>
+	<% end %><br>
+</div>
+
+
+<div class="container">
 <h3>
-	Welcome <%= current_user.name %>, This Is The List Of Events You've Created 
+ <%= current_user.name %>, This Is The List Of Events You've Created 
 </h3>
 <% current_user.created_events.each do |s| %>
 <%= link_to s.title, s %><br>
