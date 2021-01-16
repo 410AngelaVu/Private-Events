@@ -1,0 +1,28 @@
+<div class="position-relative">
+ <div class="card" style="width: 22rem; margin:5% auto;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @event.title %></h5>
+    <p class="card-text"><%= @event.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Start Time:
+		<%= @event.start_time %></li>
+    <li class="list-group-item">End Time:
+		<%= @event.end_time %></li>
+     <li class="list-group-item">
+      <p>Event created by: <%= @event.creator.name %></p>
+     </li>
+  </ul>
+  <div class="card-body" style="height: 73px;">
+    <a href="#" class="card-link"><%= link_to "Back", events_path, class:'btn btn-secondary' %></a>
+    <a href="#" class="card-link"><%= link_to 'Edit', edit_event_path, class:'btn btn-secondary' %></a>
+   <%= form_with model: @attendance, method: :post, url: attendances_path do |f| %><br>
+   <%= f.submit 'I will assist', class:'btn btn-success as' %><br>
+    <% end %>
+  </div>
+</div>
+<h4>This is the list of users who are attending to the event:</h4>
+<% @event.attendees.each do |r| %>
+<%= link_to r.name, r %><br>
+<% end %>
+</div>

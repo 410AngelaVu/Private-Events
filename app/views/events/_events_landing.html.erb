@@ -1,0 +1,14 @@
+<div class="container">
+	<h1>
+		Hello <%= current_user.name %> this is  list of all past events 
+	</h1>
+	<% @previous_events.each do |e| %>
+	<%= link_to e.title, e %><br>
+	<% end %>
+	<h2>This is the list of upcoming events:</h2>
+	<% @future_events.each do |e| %>
+	<%= link_to e.title, e %><br>
+	<% end %>
+	<%= link_to 'Create New Event', new_event_path, class:'btn btn-success' %>
+	<%= link_to 'Back To Home Page', root_path, class:'btn btn-dark' %>
+</div>
