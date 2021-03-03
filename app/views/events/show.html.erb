@@ -21,8 +21,10 @@
     <% end %>
   </div>
 </div>
+<div class="info-dej">
 <h4>This is the list of users who are attending to the event:</h4>
-<% @event.attendees.each do |r| %>
-<%= link_to r.name, r %><br>
+<% @event.attendees.each do |r| %><br>
+<%= link_to r.name, r, class:'btn btn-secondary' %><br>
 <% end %>
+</div>
 </div>
